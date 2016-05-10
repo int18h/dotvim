@@ -29,8 +29,7 @@ Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'mattn/emmet-vim'
-"Bundle 'vim-airline/vim-airline'
-"Bundle 'vim-airline/vim-airline-themes'
+Plugin 'pangloss/vim-javascript'
 filetype plugin indent on
 
 let mapleader=","
@@ -47,7 +46,7 @@ set modelines=0
 set shiftwidth=2
 set clipboard=unnamed
 "set synmaxcol=128
-set ttyscroll=10
+"set ttyscroll=10
 set encoding=utf-8
 set tabstop=4
 set nowrap
@@ -59,7 +58,7 @@ set nobackup
 set hlsearch
 set ignorecase
 set smartcase
-
+set foldmethod=syntax
 set encoding=utf8
 " Automatic formatting
 autocmd BufWritePre *.rb :%s/\s\+$//e
@@ -132,9 +131,6 @@ set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
 
 "Powerline
 let g:airline_powerline_fonts = 1
-" Airline
-"let g:airline_theme='onedark'
-
 
 " Quit with :Q
 "command -nargs=0 Quit :qa!
@@ -142,6 +138,18 @@ let g:airline_powerline_fonts = 1
 " Emmet
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+" Ack replacement with Ag
+let g:ackprg = 'ag --nogroup --nocolor --column'
+" Files autoindent
+autocmd Filetype html setlocal ts=4 sw=4 expandtab
+autocmd Filetype css setlocal ts=4 sw=4 expandtab
+autocmd Filetype scss setlocal ts=4 sw=4 expandtab
+autocmd Filetype ruby setlocal ts=2 sw=2 expandtab
+autocmd Filetype javascript setlocal ts=4 sw=4 expandtab
+
+" Vim Javascript
+let g:javascript_enable_domhtmlcss = 1
 
 "MacVim GUI mode
 if has("gui_macvim")
