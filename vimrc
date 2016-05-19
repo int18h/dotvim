@@ -18,13 +18,12 @@ Bundle 'nanotech/jellybeans.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
 Bundle 'scrooloose/nerdtree'
-"Bundle 'kien/ctrlp.vim'
 Bundle 'rking/ag.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
 Bundle 'slim-template/vim-slim'
 Bundle 'chankaward/vim-railscasts-theme'
-Bundle 'mileszs/ack.vim'
+"Bundle 'mileszs/ack.vim'
 Bundle 'airblade/vim-gitgutter'
 Bundle 'majutsushi/tagbar'
 Plugin 'ryanoasis/vim-devicons'
@@ -112,8 +111,14 @@ let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore = ['tmp', '.yardoc', 'pkg']
 
 " Syntastic
-let g:syntastic_mode_map = { 'mode': 'passive' }
-let g:syntastic_ruby_exec = '~/.rvm/rubies/default/bin/ruby'
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=1
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=0
+let g:syntastic_ruby_checkers=['rubocop', 'mri']
+let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
+let g:syntastic_javascript_checkers=['jshint']
+let g:syntastic_scala_checkers=['scalac', 'scalastyle']
 
 " Tagbar
 nmap <F8> :TagbarToggle<CR>
@@ -140,7 +145,7 @@ let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
 
 " Ack replacement with Ag
-let g:ackprg = 'ag --nogroup --nocolor --column'
+" let g:ackprg = 'ag --nogroup --nocolor --column'
 " Files autoindent
 autocmd Filetype html setlocal ts=4 sw=4 expandtab
 autocmd Filetype css setlocal ts=4 sw=4 expandtab
@@ -151,24 +156,3 @@ autocmd Filetype javascript setlocal ts=4 sw=4 expandtab
 " Vim Javascript
 let g:javascript_enable_domhtmlcss = 1
 
-"MacVim GUI mode
-if has("gui_macvim")
-""    set guifont=Menlo:h12
-  set guioptions=aAce
-  set fuoptions=maxvert,maxhorz
-  set noballooneval
-  set linespace=3
-" colorscheme dracula
-  colorscheme onedark
-"  resize current buffer by +/- 5
-  nnoremap <M-Right> :vertical resize +5<CR>
-  nnoremap <M-Left>  :vertical resize -5<CR>
-  nnoremap <M-Up>    :resize -5<CR>
-  nnoremap <M-Down>  :resize +5<CR>
-" Command+Option+Right for next
-  map <D-M-Right> :tabn<CR>
-" Command+Option+Left for previous
-  map <D-M-Left> :tabp<CR>
-" Automatically resize splits when resizing MacVim window
-  autocmd VimResized * wincmd =
-endif
