@@ -1,1 +1,1 @@
-/Users/dmitriygoncharov/.vimrc
+vimrc

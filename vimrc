@@ -5,7 +5,7 @@ set rtp+=~/.vim/bundle/vundle/
 set rtp+=~/.vim/bundle/ctrlp.vim
 call vundle#rc()
 " Vundle {{{
-Bundle 'gmarik/vundle'
+"Bundle 'gmarik/vundle'
 Bundle 'tpope/vim-sensible'
 Bundle 'tpope/vim-surround'
 Bundle 'tpope/vim-fugitive'
@@ -15,7 +15,7 @@ Bundle 'vim-ruby/vim-ruby'
 Bundle 'nanotech/jellybeans.vim'
 Bundle 'Lokaltog/vim-powerline'
 Bundle 'scrooloose/syntastic'
-Bundle 'scrooloose/nerdtree'
+" Bundle 'scrooloose/nerdtree'
 Bundle 'rking/ag.vim'
 Bundle 'kana/vim-textobj-user'
 Bundle 'nelstrom/vim-textobj-rubyblock'
@@ -27,10 +27,16 @@ Bundle 'majutsushi/tagbar'
 Plugin 'ryanoasis/vim-devicons'
 Plugin 'mattn/emmet-vim'
 Plugin 'pangloss/vim-javascript'
+Plugin 'dracula/vim'
 " }}}
 " Fonts & Colors {{{
-colorscheme onedark
-set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline\ Nerd\ Font\ Complete:h12
+"if $TERM == "xterm-256color"
+"    set t_Co=256
+"endif
+
+colorscheme darcula
+"set background=dark
+"    set guifont=Meslo\ LG\ S\ Regular\ for\ Powerline\ Nerd\ Font\ Complete:h12
 " }}}
 " Tabs & Spaces {{{
 set tabstop=4               " number of visual spaces per TAB
@@ -46,7 +52,7 @@ set cursorline              " highlight current line
 filetype plugin indent on   " load filetype-specific indent files
 set wildmenu                " visual autocomplete for command menu
 set lazyredraw              " redraw only when we need to.
-set clipboard=unnamed
+set clipboard=unnamedplus
 set encoding=utf-8
 set nowrap
 set autoindent
@@ -107,15 +113,15 @@ let g:ctrlp_working_path_mode=0
 let g:ctrlp_user_command='ag %s -l --nocolor --hidden -g ""'
 " }}}
 " PowerLine {{{
-let g:airline_powerline_fonts=1
+" let g:airline_powerline_fonts=1
 " }}}
 " Tagbar {{{
 nmap <F8> :TagbarToggle<CR>
 " }}}
 " NERDTree {{{
-nmap <leader>n :NERDTreeToggle<CR>
-let NERDTreeHighlightCursorline=1
-let NERDTreeIgnore=['tmp', '.yardoc', 'pkg']
+" nmap <leader>n :NERDTreeToggle<CR>
+" let NERDTreeHighlightCursorline=1
+" let NERDTreeIgnore=['tmp', '.yardoc', 'pkg']
 " }}}
 " Autogroups {{{
 augroup configgroup
@@ -183,5 +189,7 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
+" formats JSON to human readable format
+com! FormatJSON %!python -m json.tool
 " }}}
 " vim:foldmethod=marker:foldlevel=0
