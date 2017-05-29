@@ -1,262 +1,148 @@
-" railscasts color scheme
+"
+" Name:    railscasts.vim
+" URL:     https://github.com/jpo/vim-railscasts-theme
+" License: MIT <http://opensource.org/licenses/MIT>
+"
 
 set background=dark
 hi clear
-
 if exists("syntax_on")
   syntax reset
 endif
+let g:colors_name = "railscasts"
 
-let colors_name = "railscasts"
+hi Normal                    guifg=#e4e4e4 guibg=#272822 ctermfg=254 ctermbg=235
+hi Search                    guifg=#000000 guibg=#5f5f87 ctermfg=0 ctermbg=60 cterm=NONE
+hi Visual                    guibg=#5f5f87 ctermbg=60
+hi LineNr                    guifg=#666666 ctermfg=242
+hi Cursor                    guifg=#000000 guibg=#FFFFFF ctermfg=0 ctermbg=15
+hi CursorLine                guibg=#1c1c1c gui=NONE ctermbg=234 cterm=NONE
+hi CursorLineNr              guifg=#a9a8a8 gui=NONE ctermfg=248 cterm=NONE
+hi ColorColumn               guibg=#1c1c1c ctermbg=234
+hi! link CursorColumn ColorColumn
+hi VertSplit                 guifg=#444444 guibg=#121212 gui=NONE ctermfg=238 ctermbg=233 cterm=NONE
+hi SignColumn                guifg=#FFFFFF guibg=NONE ctermfg=15 ctermbg=NONE
 
-function! s:translate_color(number)
-  let color_number = a:number
-  if color_number == 0
-    return '#1E1F29'
-  endif
-  if color_number == 1
-    return '#C72D2D'
-  endif
-  if color_number == 2
-    return '#87B047'
-  endif
-  if color_number == 3
-    return '#FFBE53'
-  endif
-  if color_number == 4
-    return '#5883A0'
-  endif
-  if color_number == 5
-    return '#CC59B2'
-  endif
-  if color_number == 6
-    return '#ABA8E2'
-  endif
-  if color_number == 7
-    return '#DAD4D2'
-  endif
-  if color_number == 8
-    return '#404258'
-  endif
-  if color_number == 9
-    return '#B86329'
-  endif
-  if color_number == 10
-    return '#519F50'
-  endif
-  if color_number == 11
-    return '#BC9458'
-  endif
-  if color_number == 12
-    return '#2C313F'
-  endif
-  if color_number == 13
-    return '#232430'
-  endif
-  if color_number == 14
-    return '#D5D4FF'
-  endif
-  if color_number == 15
-    return '#FFFFFF'
-  endif
-endfunction
-function! s:highlight(group, fg, bg, attr)
-  exec "hi " . a:group . " guifg=" . s:translate_color(a:fg)
-  exec "hi " . a:group . " ctermfg=" . a:fg
-  exec "hi " . a:group . " guibg=" . s:translate_color(a:bg)
-  exec "hi " . a:group . " ctermbg=" . a:bg
-  exec "hi " . a:group . " gui=" . a:attr
-  exec "hi " . a:group . " cterm=" . a:attr
-endfunction
+" StatusLine
+" Bold
+hi User1                     guifg=#eeeeee guibg=#606060 gui=bold ctermfg=255 ctermbg=241 cterm=bold
+" Yellow
+hi User2                     guifg=#FFAF00 guibg=#606060 gui=bold ctermfg=214 ctermbg=241 cterm=bold
+" Green
+hi User3                     guifg=#5fff00 guibg=#606060 gui=bold ctermfg=82 ctermbg=241 cterm=bold
+" Red
+hi User4                     guifg=#870000 guibg=#606060 gui=bold ctermfg=88 ctermbg=241 cterm=bold
+hi User5                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
+hi User6                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
+hi User7                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
+hi User8                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
+hi User9                     guifg=#e4e4e4 guibg=#606060 gui=bold ctermfg=254 ctermbg=241 cterm=bold
+hi StatusLine                guifg=#e4e4e4 guibg=#606060 gui=NONE ctermfg=254 ctermbg=241 cterm=NONE
+hi StatusLineNC              guifg=#585858 guibg=#303030 gui=NONE ctermfg=240 ctermbg=236 cterm=NONE
 
-" General colors
-call s:highlight("Normal", 7, 0, "NONE")
-call s:highlight("NonText", 8, "NONE", "NONE")
-call s:highlight("SpecialKey", "NONE", 13, "NONE")
+" Folds
+" -----
+" line used for closed folds
+hi Folded                    guifg=#ffffff guibg=#444444 gui=NONE ctermfg=15 ctermbg=238 cterm=NONE
+hi! link FoldColumn SignColumn
 
-"call s:highlight("Cursor", 0, 7, "reverse")
-call s:highlight("LineNr", 8, 13, "NONE")
-call s:highlight("VertSplit", 8, "NONE", "NONE")
-call s:highlight("StatusLine", 7, 13, "NONE")
-call s:highlight("StatusLineNC", 8, 13, "NONE")
+" Invisible Characters
+" ------------------
+hi NonText                   guifg=#767676 gui=NONE cterm=NONE ctermfg=243
+hi SpecialKey                guifg=#767676 gui=NONE cterm=NONE ctermfg=243
 
-call s:highlight("Folded", 8, "NONE", "NONE")
-call s:highlight("Title", "NONE", "NONE", "NONE")
-call s:highlight("Visual", 7, 8, "NONE")
-call s:highlight("VisualNOS", 7, 8, "NONE")
+" Misc
+" ----
+" directory names and other special names in listings
+hi Directory                 guifg=#87af5f gui=NONE ctermfg=107 cterm=NONE
 
-call s:highlight("WildMenu", 0, 3, "NONE")
-call s:highlight("PmenuSbar", 0, 7, "NONE")
-"call s:highlight("Ignore", "NONE", "NONE", "NONE")
+" Popup Menu
+" ----------
+" normal item in popup
+hi Pmenu                     guifg=#ffffff guibg=#444444 gui=NONE ctermfg=15 ctermbg=238 cterm=NONE
+" selected item in popup
+hi PmenuSel                  guifg=#000000 guibg=#87af5f gui=NONE ctermfg=0 ctermbg=107 cterm=NONE
+" scrollbar in popup
+hi PMenuSbar                 guibg=#5A647E gui=NONE ctermfg=15 ctermbg=60 cterm=NONE
+" thumb of the scrollbar in the popup
+hi PMenuThumb                guifg=#ffffff guibg=#a8a8a8 gui=NONE ctermfg=15 ctermbg=248 cterm=NONE
 
-call s:highlight("Error", "NONE", 1, "NONE")
-call s:highlight("ErrorMsg", "NONE", 1, "NONE")
-call s:highlight("WarningMsg", "NONE", 9, "NONE")
+" Code constructs
+" ---------------
+hi Comment                   guifg=#af875f ctermfg=137
+hi Todo                      guifg=#df5f5f guibg=NONE gui=bold ctermfg=167 ctermbg=NONE cterm=bold
+" hi Todo                      guifg=#000000 guibg=ffff00 gui=bold ctermfg=16 ctermbg=11 cterm=bold
+hi Constant                  guifg=#6D9CBE ctermfg=73
+hi Error                     guifg=#FFFFFF guibg=#990000 ctermfg=221 ctermbg=88
+hi WarningMsg                guifg=#800000 guibg=NONE ctermfg=1 ctermbg=NONE
+hi Identifier                guifg=#af5f5f gui=NONE ctermfg=221 cterm=NONE
+hi Keyword                   guifg=#af5f00 gui=NONE ctermfg=130 cterm=NONE
+hi Number                    guifg=#87af5f ctermfg=107
+hi Statement                 guifg=#af5f00 gui=NONE ctermfg=130 cterm=NONE
+hi String                    guifg=#87af5f ctermfg=107
+hi Title                     guifg=#FFFFFF ctermfg=15
+hi Type                      guifg=#df5f5f gui=NONE ctermfg=167 cterm=NONE
+hi PreProc                   guifg=#ff8700 ctermfg=208
+hi Special                   guifg=#005f00 ctermfg=22
 
-" Message displayed in lower left, such as --INSERT--
-call s:highlight("ModeMsg", 4, "NONE", "NONE")
+" Diffs
+" -----
+hi DiffAdd                   guifg=#e4e4e4 guibg=#519F50 ctermfg=254 ctermbg=22
+hi DiffDelete                guifg=#000000 guibg=#660000 gui=bold ctermfg=16 ctermbg=52 cterm=bold
+hi DiffChange                guifg=#FFFFFF guibg=#870087 ctermfg=15 ctermbg=90
+hi DiffText                  guifg=#FFFFFF guibg=#FF0000 gui=bold ctermfg=15 ctermbg=9 cterm=bold
 
-if version >= 700 " Vim 7.x specific colors
-  " For cursorline, if we set all the properties, things don't go well
-  exe "hi CursorLine guibg=".s:translate_color(13)."gui=none ctermbg=13 cterm=none"
-  exe "hi ColorColumn guibg=".s:translate_color(13)."gui=none ctermbg=13 cterm=none"
-  call s:highlight("CursorColumn", "NONE", "NONE", "NONE")
-  call s:highlight("TabLine", 8, "NONE", "NONE")
-  call s:highlight("TabLineFill", "NONE", "NONE", "NONE")
-  call s:highlight("TabLineSel", "NONE", "NONE", "BOLD")
-  call s:highlight("MatchParen", 0, 6, "NONE")
-  call s:highlight("Pmenu", "NONE", "NONE", "NONE")
-  call s:highlight("PmenuSel", 0, 3, "NONE")
-  call s:highlight("Search", 0, 2, "underline")
-endif
-
-" Syntax highlighting
-call s:highlight("Comment", 11, "NONE", "NONE")
-call s:highlight("String", 2, "NONE", "NONE")
-call s:highlight("Number", 2, "NONE", "NONE")
-
-call s:highlight("Keyword", 9, "NONE", "NONE")
-call s:highlight("Statement", 9, "NONE", "NONE")
-call s:highlight("PreProc", 4, "NONE", "NONE")
-
-call s:highlight("Todo", 5, "NONE", "bold")
-call s:highlight("Constant", 4, "NONE", "NONE")
-
-call s:highlight("Identifier", 4, "NONE", "NONE")
-call s:highlight("Function", 3, "NONE", "NONE")
-call s:highlight("Class", 15, "NONE", "bold")
-call s:highlight("Type", 4, "NONE", "NONE")
-
-call s:highlight("Special", 5, "NONE", "NONE")
-call s:highlight("Delimiter", 7, "NONE", "NONE")
-call s:highlight("Operator", 9, "NONE", "NONE")
-
-call s:highlight("Blue", 4, "NONE", "NONE")
-call s:highlight("Green", 2, "NONE", "NONE")
-call s:highlight("DarkGreen", 10, "NONE", "NONE")
-call s:highlight("Grey", 8, "NONE", "NONE")
-call s:highlight("Orange", 9, "NONE", "NONE")
-call s:highlight("Red", 1, "NONE", "NONE")
-call s:highlight("White", 15, "NONE", "NONE")
-call s:highlight("Gold", 3, "NONE", "NONE")
-call s:highlight("Purple", 6, "NONE", "NONE")
-
-hi link Character       Constant
-hi link Conditional     Keyword
-hi link Boolean         Constant
-hi link Float           Number
-hi link Repeat          Statement
-hi link Label           Statement
-hi link Exception       Statement
-hi link Include         PreProc
-hi link Define          PreProc
-hi link Macro           PreProc
-hi link PreCondit       PreProc
-hi link StorageClass    Type
-hi link Structure       Type
-hi link Typedef         Type
-"hi link Tag             Special
-hi link SpecialChar     Special
-hi link SpecialComment  Special
-hi link Debug           Special
+hi diffAdded                 guifg=#008700 ctermfg=28
+hi diffRemoved               guifg=#800000 ctermfg=1
+hi diffNewFile               guifg=#FFFFFF guibg=NONE gui=bold ctermfg=15 ctermbg=NONE cterm=bold
+hi diffFile                  guifg=#FFFFFF guibg=NONE gui=bold ctermfg=15 ctermbg=NONE cterm=bold
 
 
-" Special for Ruby
-hi link rubyClass                   Orange     " class
-hi link rubyDefine                  Orange     " def
-hi link rubyFunction                Gold       " function_name
-hi link rubyInstanceVariable        Purple     " @var
-hi link rubyConditional             Orange     " if
-hi link rubyInclude                 Orange     " include
-hi link rubyKeyword                 Orange     " super, return
-hi link rubyConstant                Normal     " Mongoid::Document
-hi link rubyInterpolationDelimiter  DarkGreen  " #{}
-hi link rubyRailsUserClass          White      " SomethingsController
-hi link rubyRailsFilterMethod       Red        " before_filter
-hi link rubyRailsRenderMethod       Red        " respond_to
-hi link rubyRailsARClassMethod      Red        " attr_accessible
-hi link rubyRailsARValidationMethod Normal     " validates
+" Ruby
+" ----
+hi rubyTodo                  guifg=#df5f5f guibg=NONE gui=bold ctermfg=167 ctermbg=NONE cterm=bold
+hi rubyClass                 guifg=#FFFFFF ctermfg=15
+hi rubyConstant              guifg=#df5f5f ctermfg=167
+hi rubyInterpolation         guifg=#FFFFFF ctermfg=15
+hi rubyBlockParameter        guifg=#dfdfff ctermfg=189
+hi rubyPseudoVariable        guifg=#ffdf5f ctermfg=221
+hi rubyStringDelimiter       guifg=#87af5f ctermfg=107
+hi rubyInstanceVariable      guifg=#dfdfff ctermfg=189
+hi rubyPredefinedConstant    guifg=#df5f5f ctermfg=167
+hi rubyLocalVariableOrMethod guifg=#dfdfff ctermfg=189
 
-"" Special for HTML
-hi link htmlTagName        Gold
-hi link htmlSpecialTagName Gold
-hi link htmlTag            Gold
-hi link htmlEndTag         Gold
-hi link htmlArg            Gold
-hi link htmlLink           Normal
-hi link javaScript         Normal
+" Python
+" ------
+hi pythonExceptions          guifg=#ffaf87 ctermfg=216
+hi pythonDoctest             guifg=#8787ff ctermfg=105
+hi pythonDoctestValue        guifg=#87d7af ctermfg=115
 
-"" Special for PHP
-hi link phpVarSelector  Purple
-hi link phpIdentifier   Purple
-hi link phpType         Red
-hi link phpRepeat       Orange
+" Mail
+" ----
+hi mailEmail                 guifg=#87af5f ctermfg=107 gui=italic cterm=underline
+hi mailHeaderKey             guifg=#ffdf5f ctermfg=221
+hi! link mailSubject mailHeaderKey
 
-"" Special for Coffeescript
-hi link coffeeAssignSymbols White
-hi link coffeeSpecialVar    Purple
-hi link coffeeObjAssign     Gold
+" Spell
+" ----
+hi SpellBad                  guifg=#D70000 guibg=NONE gui=undercurl ctermfg=160 ctermbg=NONE cterm=underline
+hi SpellRare                 guifg=#df5f87 guibg=NONE gui=underline ctermfg=168 ctermbg=NONE cterm=underline
+hi SpellCap                  guifg=#dfdfff guibg=NONE gui=underline ctermfg=189 ctermbg=NONE cterm=underline
+hi SpellLocal                guifg=#00FFFF guibg=NONE gui=undercurl ctermfg=51 ctermbg=NONE cterm=underline
+hi MatchParen                guifg=#FFFFFF guibg=#005f5f ctermfg=15 ctermbg=23
 
-"" Special for Javascript
-"hi link javaScriptNumber         Number
-"hi link javaScriptPrototype      Identifier " prototype
-"hi link javaScriptSource         Keyword " import export
-"hi link javaScriptType           Identifier " const this undefined var void yield 
-"hi link javaScriptOperator       Keyword " delete new in instanceof let typeof
-"hi link javaScriptBoolean        Keyword " true false
-"hi link javaScriptNull           Keyword " null
-"hi link javaScriptConditional    Keyword " if else
-"hi link javaScriptRepeat         Keyword " do while for
-"hi link javaScriptBranch         Keyword " break continue switch case default return
-"hi link javaScriptStatement      Keyword " try catch throw with finally
-"hi link javaScriptGlobalObjects  Keyword " Array Boolean Date Function Infinity JavaArray JavaClass JavaObject JavaPackage Math Number NaN Object Packages RegExp String Undefined java netscape sun
-"hi shCommandSub		ctermfg=white
+" XML
+" ---
+hi xmlTag                    guifg=#dfaf5f ctermfg=179
+hi xmlTagName                guifg=#dfaf5f ctermfg=179
+hi xmlEndTag                 guifg=#dfaf5f ctermfg=179
 
-"" Sepcial for CSS
-hi link cssType                 Green
-hi link cssIdentifier           Gold
-hi link cssClassName            Blue
-hi link cssTagName              Orange
-hi link cssBraces               Normal
-hi link cssColor                DarkGreen
-hi link cssCommonAttr           Green
-hi link cssTextAttr             Green
-hi link cssFontAttr             Green
-hi link cssBoxAttr              Green
-hi link cssRenderAttr           Green
-hi link cssUIAttr               Green
-hi link cssPseudoClass          Orange
-hi link cssPseudoClassId        Orange
-hi link cssSelectorOp           Normal
-hi link cssSelectorOp2          Normal
-hi link cssMedia                Orange
-hi link cssMediaType            Green
-hi link cssBraces               White
-hi link cssFontProp             White
-hi link cssColorProp            White
-hi link cssTextProp             White
-hi link cssBoxProp              White
-hi link cssRenderProp           White
-hi link cssAuralProp            White
-hi link cssRenderProp           White
-hi link cssGeneratedContentProp White
-hi link cssPagingProp           White
-hi link cssTableProp            White
-hi link cssUIProp               White
-hi link cssFontDescriptorProp   White
+" HTML
+" ----
+hi! link htmlTag              xmlTag
+hi! link htmlTagName          xmlTagName
+hi! link htmlEndTag           xmlEndTag
 
-"" Special for SASS
-hi link sassVariable                Purple
-hi link sassFunction                Red
-hi link sassMixing                  Red
-hi link sassMixin                   Red
-hi link sassExtend                  Red
-hi link sassFor                     Red
-hi link sassInterpolationDelimiter  DarkGreen
-hi link sassAmpersand               Normal
-hi link sassId                      cssIdentifier
-hi link sassClass                   cssClassName
-hi link sassIdChar                  sassId
-hi link sassClassChar               sassClass
-hi link sassInclude                 Orange
-
+hi checkbox guifg=#3a3a3a guibg=NONE gui=NONE ctermfg=237 ctermbg=NONE cterm=NONE
+hi checkboxDone guifg=#5fff00 guibg=NONE gui=BOLD ctermfg=82 ctermbg=NONE cterm=BOLD
+hi checkboxNotDone guifg=#005fdf guibg=NONE gui=BOLD ctermfg=26 ctermbg=NONE cterm=BOLD
