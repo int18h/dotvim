@@ -27,6 +27,9 @@ Plug 'airblade/vim-gitgutter'
 " Fugitive: Git from within Vim
 Plug 'tpope/vim-fugitive'
 
+" Search TODO, FIXME, etc...
+Plug 'gilsondev/searchtasks.vim'
+
 " Completion
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'htmldjango', 'scss','eruby','less'] }
 
