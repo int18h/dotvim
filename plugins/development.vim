@@ -20,3 +20,6 @@ let g:javascript_enable_domhtmlcss=1
 " List occurrences for search {{{
 let g:searchtasks_list=["TODO", "FIXME", "XXX"]
 " }}}
+" EditorConfig {{{
+let g:EditorConfig_core_mode = 'external_command'
+" }}}
