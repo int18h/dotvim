@@ -36,6 +36,10 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'htmldjango', 'scss','eruby','l
 " Tagbar
 Plug 'majutsushi/tagbar'
 
+" Nerdtree: allows you to explore your filesystem and to open files and directories
+Plug 'scrooloose/nerdtree'
+Plug 'Xuyuanp/nerdtree-git-plugin'
+
 " Respect .editorconfig files. (http://editorconfig.org/)
 Plug 'editorconfig/editorconfig-vim'
 

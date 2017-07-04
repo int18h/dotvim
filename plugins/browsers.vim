@@ -34,9 +34,9 @@ let g:netrw_localrmdir='rm -fr'
 "let g:netrw_winsize = 25
 " }}} 
 " NERDTree {{{
-" nmap <leader>n :NERDTreeToggle<CR>
-" let NERDTreeHighlightCursorline=1
-" let NERDTreeIgnore=['tmp', '.yardoc', 'pkg']
+nmap <leader>n :NERDTreeToggle<CR>
+let NERDTreeHighlightCursorline=1
+let NERDTreeIgnore=['tmp', '.yardoc', 'pkg']
 " }}}
 " TagBar {{{
 nmap <F8> :TagbarToggle<CR>
