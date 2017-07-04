@@ -10,6 +10,8 @@ runtime! plugins/plug.vim
 "endif
 colorscheme monokai
 set t_Co=256
+let g:monokai_term_italic = 0
+let g:monokai_gui_italic = 0
 " }}}
 " Tabs & Spaces {{{
 set tabstop=4               " number of visual spaces per TAB
