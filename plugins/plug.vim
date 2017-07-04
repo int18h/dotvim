@@ -57,6 +57,7 @@ Plug 'scrooloose/syntastic'
 
 " Polyglot: A solid language pack for Vim.
 Plug 'sheerun/vim-polyglot'
+Plug 'crusoexia/vim-javascript-lib', { 'for': ['js', 'html', 'erb'] }
 
 Plug 'tpope/vim-rails', { 'for': ['rb', 'erb'] }
 Plug 'tpope/vim-rake', { 'for': 'rb' }
