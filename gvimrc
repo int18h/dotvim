@@ -11,3 +11,4 @@ else
 end
 set clipboard=unnamedplus
 colorscheme monokai
+" colorscheme onedark
