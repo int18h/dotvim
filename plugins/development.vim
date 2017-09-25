@@ -23,3 +23,7 @@ let g:searchtasks_list=["TODO", "FIXME", "XXX"]
 " EditorConfig {{{
 let g:EditorConfig_core_mode = 'external_command'
 " }}}
+" Auto complete settings {{{
+set omnifunc=syntaxcomplete#Complete
+set completeopt=longest,menuone
+" }}}

@@ -10,6 +10,8 @@ call plug#begin('~/.vim/plugged')
 
 " Colorschemes
 Plug 'rcabralc/monokai-airline.vim'
+Plug 'rakr/vim-one'
+Plug 'chriskempson/base16-vim'
 
 " Fuzzy file opener
 Plug 'ctrlpvim/ctrlp.vim'
