@@ -9,6 +9,7 @@ runtime! plugins/plug.vim
 "    set t_Co=256
 "endif
 colorscheme monokai
+" colorscheme onedark
 set t_Co=256
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
@@ -26,6 +27,8 @@ set showcmd                 " show command in bottom bar
 set cursorline              " highlight current line
 filetype plugin indent on   " load filetype-specific indent files
 set wildmenu                " visual autocomplete for command menu
+set nocursorline 
+set ttyfast
 set lazyredraw              " redraw only when we need to.
 set clipboard=unnamedplus
 set encoding=utf-8

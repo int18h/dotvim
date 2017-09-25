@@ -7,7 +7,7 @@ if has("nvim")
 else
     " set guifont=Meslo\ LG\ L\ DZ:h12
     set guifont=Fira\ Mono\ For\ Powerline:h12
-    set linespace=4
+    set linespace=7
 end
 set clipboard=unnamedplus
 colorscheme monokai
