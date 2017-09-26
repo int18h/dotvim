@@ -8,8 +8,8 @@ runtime! plugins/plug.vim
 "if $TERM == "xterm-256color"
 "    set t_Co=256
 "endif
-colorscheme monokai
-" colorscheme onedark
+" colorscheme monokai
+colorscheme onedark
 set t_Co=256
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
