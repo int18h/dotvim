@@ -10,5 +10,5 @@ else
     set linespace=7
 end
 set clipboard=unnamedplus
-colorscheme monokai
-" colorscheme onedark
+" colorscheme monokai
+colorscheme darcula

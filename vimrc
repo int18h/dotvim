@@ -9,7 +9,7 @@ runtime! plugins/plug.vim
 "    set t_Co=256
 "endif
 " colorscheme monokai
-colorscheme onedark
+colorscheme darcula
 set t_Co=256
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
