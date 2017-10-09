@@ -1,5 +1,6 @@
 set nocompatible
 filetype off
+syntax on
 
 " Plug {{{
 runtime! plugins/plug.vim
@@ -9,7 +10,9 @@ runtime! plugins/plug.vim
 "    set t_Co=256
 "endif
 " colorscheme monokai
-colorscheme onedark
+"let g:onedark_termcolors=16
+" colorscheme onedark
+colorscheme monokai
 set t_Co=256
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
@@ -34,7 +37,7 @@ set softtabstop=4           " number of spaces in tab when editing
 set expandtab               " tabs are spaces
 " }}}
 " UI Config {{{
-syntax on
+" syntax on
 set number                  " show line numbers
 set showcmd                 " show command in bottom bar
 set cursorline              " highlight current line
