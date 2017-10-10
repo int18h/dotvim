@@ -13,6 +13,7 @@ Plug 'rcabralc/monokai-airline.vim'
 Plug 'crusoexia/vim-monokai'
 Plug 'rakr/vim-one'
 Plug 'chriskempson/base16-vim'
+Plug 'morhetz/gruvbox'
 
 " Fuzzy file opener
 Plug 'ctrlpvim/ctrlp.vim'

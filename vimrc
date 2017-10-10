@@ -5,15 +5,20 @@ syntax on
 " Plug {{{
 runtime! plugins/plug.vim
 " }}}
+" OS detection {{{
+if !exists("g:os")
+    if has("win64") || has("win32") || has("win16")
+        let g:os = "Windows"
+    else
+        let g:os = substitute(system('uname'), '\n', '', '')
+    endif
+endif
+" }}}
 " Fonts & Colors {{{
-"if $TERM == "xterm-256color"
-"    set t_Co=256
-"endif
-" colorscheme monokai
-"let g:onedark_termcolors=16
-" colorscheme onedark
+if $TERM == "xterm-256color"
+    set t_Co=256
+endif
 colorscheme monokai
-set t_Co=256
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
 "colorscheme onedark
