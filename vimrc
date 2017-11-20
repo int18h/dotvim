@@ -17,12 +17,10 @@ endif
 if $TERM == "xterm-256color"
     set t_Co=256
 endif
-" colorscheme monokai
 colorscheme monokai
 " set t_Co=256
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
-"colorscheme onedark
 if (empty($TMUX))
 " if (has("nvim"))
 "   "For Neovim 0.1.3 and 0.1.4 < https://github.com/neovim/neovim/pull/2198 >

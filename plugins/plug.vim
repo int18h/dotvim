@@ -69,6 +69,7 @@ Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
+Plug 'fatih/vim-go', { 'for': ['go'] }
 
 " Other plugins require curl
 if executable("curl")

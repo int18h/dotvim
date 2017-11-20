@@ -27,3 +27,6 @@ let g:EditorConfig_core_mode = 'external_command'
 set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 " }}}
+" GO programming {{{
+let g:go_test_timeout='10s'
+" }}}
