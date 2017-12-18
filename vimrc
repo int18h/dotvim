@@ -18,7 +18,10 @@ endif
 if $TERM == "xterm-256color"
     set t_Co=256
 endif
-colorscheme monokai
+if $COLORTERM == "truecolor"
+    set termguicolors
+end
+colorscheme onedark
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
 if (empty($TMUX))
