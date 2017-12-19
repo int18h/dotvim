@@ -18,7 +18,7 @@ endif
 if $TERM == "xterm-256color"
     set t_Co=256
 endif
-if $COLORTERM == "truecolor"
+if $TRUECOLOR_TERM == 1 
     set termguicolors
 end
 colorscheme onedark

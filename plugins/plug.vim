@@ -71,6 +71,16 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go', { 'for': ['go'] }
 
+" Deoplete installation
+if has('nvim')
+  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+else
+  Plug 'Shougo/deoplete.nvim'
+  Plug 'roxma/nvim-yarp'
+  Plug 'roxma/vim-hug-neovim-rpc'
+endif
+
+Plug 'zchee/deoplete-go', { 'do': 'make'}
 " Other plugins require curl
 if executable("curl")
     " Webapi: Dependency of Gist-vim
