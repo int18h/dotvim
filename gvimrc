@@ -21,4 +21,4 @@ if has("gui_running")
     set linespace=7
 endif
 set clipboard=unnamedplus
-colorscheme onedark
+colorscheme darcula

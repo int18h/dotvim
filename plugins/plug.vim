@@ -80,7 +80,12 @@ else
   Plug 'roxma/vim-hug-neovim-rpc'
 endif
 
-Plug 'zchee/deoplete-go', { 'do': 'make'}
+Plug 'Shougo/vimproc.vim', {'do' : 'make'}
+Plug 'zchee/deoplete-go', { 'do': 'make', 'for': 'go' }
+Plug 'fishbullet/deoplete-ruby', { 'for': 'ruby' }
+" Plug 'Shougo/deoplete-rct', { 'for': 'ruby' }
+Plug 'osyo-manga/vim-monster'
+
 " Other plugins require curl
 if executable("curl")
     " Webapi: Dependency of Gist-vim

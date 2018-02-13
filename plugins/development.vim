@@ -24,12 +24,26 @@ let g:searchtasks_list=["TODO", "FIXME", "XXX"]
 let g:EditorConfig_core_mode = 'external_command'
 " }}}
 " Auto complete settings {{{
-set omnifunc=syntaxcomplete#Complete
-set completeopt=longest,menuone
+"set omnifunc=syntaxcomplete#Complete
+"set completeopt=longest,menuone
 " }}}
 " GO programming {{{
 let g:go_test_timeout='10s'
 " }}}
 " Deoplete {{{
 let g:deoplete#enable_at_startup = 1
+let g:monster#completion#rcodetools#backend = "async_rct_complete"
+let g:deoplete#sources#omni#input_patterns = {
+            \   "ruby" : '[^. *\t]\.\w*\|\h\w*::',
+            \}
+call deoplete#custom#set('buffer', 'rank', 501)
+" }}}
+" {{{ Omnifunc
+set omnifunc=syntaxcomplete#Complete
+autocmd FileType css setlocal omnifunc=csscomplete#CompleteCSS
+autocmd FileType html,markdown setlocal omnifunc=htmlcomplete#CompleteTags
+autocmd FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS
+autocmd FileType python setlocal omnifunc=pythoncomplete#Complete
+autocmd FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+autocmd FileType ruby setlocal omnifunc=rubycomplete#Complete
 " }}}
