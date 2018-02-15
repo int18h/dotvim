@@ -37,6 +37,7 @@ let g:netrw_localrmdir='rm -fr'
 nmap <leader>n :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=['tmp', '.yardoc', 'pkg']
+" autocmd VimEnter * NERDTreeClose
 " }}}
 " TagBar {{{
 nmap <F8> :TagbarToggle<CR>
