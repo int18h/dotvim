@@ -21,7 +21,7 @@ endif
 if $TRUECOLOR_TERM == 1 
     set termguicolors
 end
-colorscheme tomorrow-night-eighties
+colorscheme Tomorrow-Night 
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
 if (empty($TMUX))

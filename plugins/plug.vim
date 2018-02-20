@@ -14,7 +14,13 @@ Plug 'crusoexia/vim-monokai'
 Plug 'rakr/vim-one'
 Plug 'chriskempson/base16-vim'
 Plug 'morhetz/gruvbox'
+" Plug 'ryanoasis/vim-devicons'
+" Plug 'chriskempson/vim-tomorrow-theme'
+" Plug 'arty88/sexy-railscasts-256-theme'
 
+Plug 'Shougo/vimproc.vim'
+Plug 'Shougo/unite.vim'
+" Plug 'Shougo/denite.nvim'
 " Fuzzy file opener
 Plug 'ctrlpvim/ctrlp.vim'
 "Airline

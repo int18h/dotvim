@@ -19,6 +19,7 @@ function! <SID>StripTrailingWhitespaces()
     let @/=_s
     call cursor(l, c)
 endfunction
+"
 " formats JSON to human readable format
 com! FormatJSON %!python -m json.tool
 " }}}
