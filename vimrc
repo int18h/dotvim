@@ -20,7 +20,7 @@ if $TERM == "xterm-256color"
 endif
 if $TRUECOLOR_TERM == 1 
     set termguicolors
-end
+endif
 colorscheme Tomorrow-Night 
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
