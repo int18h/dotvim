@@ -44,7 +44,7 @@ let g:NERDTreeWinSize=40
 nmap <F8> :TagbarToggle<CR>
 " }}}
 " Unite {{{
-let g:unite_enable_start_insert = 1
+let g:unite_enable_start_insert = 0
 " Отображаем Unite в нижней части экрана
 " let g:unite_split_rule = "botright"
 " Отключаем замену статус строки
@@ -56,6 +56,7 @@ let g:unite_candidate_icon="▷"
 let g:unite_source_grep_command="ag"
 let g:unite_source_grep_default_opts="-i --nocolor --nogroup"
 nnoremap <leader>f :<C-u>Unite -buffer-name=files -start-insert buffer file_rec/async:!<cr>
-nnoremap <leader>b :<C-u>Unite -quick-match buffer<cr>
+" nnoremap <leader>b :<C-u>Unite -quick-match buffer<cr>
+nnoremap <leader>b :<C-u>Unite buffer<cr>
 nnoremap <leader>s :<C-u>Unite grep:.<cr>
 " }}}
