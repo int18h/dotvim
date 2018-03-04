@@ -18,11 +18,13 @@ Plug 'morhetz/gruvbox'
 " Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'arty88/sexy-railscasts-256-theme'
 
-Plug 'Shougo/vimproc.vim'
-Plug 'Shougo/unite.vim'
-" Plug 'Shougo/denite.nvim'
+" Plug 'Shougo/vimproc.vim'
+" Plug 'Shougo/unite.vim'
+" " Plug 'Shougo/denite.nvim'
 " Fuzzy file opener
 Plug 'ctrlpvim/ctrlp.vim'
+" Buffer Explorer
+Plug 'jlanzarotta/bufexplorer'
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
