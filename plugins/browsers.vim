@@ -1,5 +1,6 @@
 " CtrlP {{{
-noremap <silent> t :CtrlP<CR>
+" noremap <silent> t :CtrlP<CR>
+noremap <leader>t :CtrlPBufTagAll<CR>
 let g:ctrlp_match_window='bottom,order:ttb'
 let g:ctrlp_switch_buffer=0
 let g:ctrlp_working_path_mode = 'rw'
@@ -34,7 +35,7 @@ let g:netrw_localrmdir='rm -fr'
 "let g:netrw_winsize = 25
 " }}} 
 " NERDTree {{{
-nmap <leader>n :NERDTreeToggle<CR>
+nmap <leader>nt :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
 let NERDTreeIgnore=['tmp', '.yardoc', 'pkg']
 let g:NERDTreeWinSize=40

@@ -21,7 +21,8 @@ endif
 if $TRUECOLOR_TERM == 1 
     set termguicolors
 endif
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme monokai
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
 " }}}
@@ -74,7 +75,7 @@ inoremap jk <esc>
 " toggle gundo
 noremap <leader>u :GundoToggle<CR>
 " Open ag.vim
-nnoremap <leader>a :Ag!
+nnoremap <leader>ag :Ag!
 " Tab between buffers
 noremap <tab> <c-w><c-w>
 " Switch between last two buffers

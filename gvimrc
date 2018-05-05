@@ -9,7 +9,7 @@ set guioptions-=L  "remove left-hand scroll bar
 "     set guifont=Fira\ Mono\ For\ Powerline:h12
 "     set linespace=7
 " end
-
+set guicursor+=a:blinkon0
 if has("gui_running")
     if g:os == "Darwin"
         set guifont=Fira\ Mono\ For\ Powerline:h12
@@ -21,4 +21,5 @@ if has("gui_running")
     set linespace=7
 endif
 set clipboard=unnamedplus
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
+colorscheme monokai
