@@ -73,7 +73,6 @@ Plug 'crusoexia/vim-javascript-lib', { 'for': ['js', 'html', 'erb'] }
 
 Plug 'tpope/vim-rails', { 'for': ['rb', 'erb'] }
 Plug 'tpope/vim-rake', { 'for': 'rb' }
-Plug 'tpope/vim-endwise'
 Plug 'kana/vim-textobj-user'
 Plug 'nelstrom/vim-textobj-rubyblock'
 Plug 'tpope/vim-sensible'
