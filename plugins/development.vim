@@ -11,9 +11,6 @@ let g:syntastic_scala_checkers=['scalac', 'scalastyle']
 let g:user_emmet_install_global=0
 autocmd FileType html,css,eruby EmmetInstall
 " }}}
-" Go programming {{{
-set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
-" }}}
 " Javascript programming {{{
 let g:javascript_enable_domhtmlcss=1
 " }}}
@@ -28,9 +25,23 @@ set omnifunc=syntaxcomplete#Complete
 set completeopt=longest,menuone
 " }}}
 " GO programming {{{
+" set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
 let g:go_test_timeout='10s'
 " }}}
 " Deoplete {{{
 let g:deoplete#enable_at_startup = 1
 let g:deoplete#auto_complete_start_length = 5
+" TernJS
+let g:deoplete#sources#ternjs#types = 1
+let g:deoplete#sources#ternjs#depths = 1
+let g:deoplete#sources#ternjs#docs = 1
+let g:deoplete#sources#ternjs#filter = 0
+let g:deoplete#sources#ternjs#case_insensitive = 1
+let g:deoplete#sources#ternjs#guess = 0
+let g:deoplete#sources#ternjs#filetypes = [
+                \ 'jsx',
+                \ 'javascript.jsx',
+                \ 'vue',
+                \ '...'
+                \ ]
 " }}}
