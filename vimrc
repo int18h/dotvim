@@ -21,9 +21,11 @@ endif
 if $TRUECOLOR_TERM == 1 
     set termguicolors
 endif
-colorscheme Tomorrow-Night
+" colorscheme Tomorrow-Night
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
+set background=light
+colorscheme solarized
 " }}}
 " Tabs & Spaces {{{
 set tabstop=4               " number of visual spaces per TAB
