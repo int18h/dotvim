@@ -24,8 +24,11 @@ endif
 " colorscheme Tomorrow-Night
 let g:monokai_term_italic = 0
 let g:monokai_gui_italic = 0
+" colorscheme dracula
 set background=light
 colorscheme solarized
+let g:airline_theme='solarized'
+let g:airline#extensions#tabline#enabled = 1
 " }}}
 " Tabs & Spaces {{{
 set tabstop=4               " number of visual spaces per TAB
