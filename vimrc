@@ -22,12 +22,21 @@ if $TRUECOLOR_TERM == 1
     set termguicolors
 endif
 " colorscheme Tomorrow-Night
-let g:monokai_term_italic = 0
-let g:monokai_gui_italic = 0
-" colorscheme dracula
-set background=light
-colorscheme solarized
-let g:airline_theme='solarized'
+" COLORSCHEME: monokai
+" let g:monokai_term_italic = 0
+" let g:monokai_gui_italic = 0
+" colorscheme monokai
+" COLORSCHEME: solarized-light
+" set background=light
+" colorscheme solarized
+" let g:airline_theme='solarized'
+" COLORSCHEME: gruvbox-dark
+set background=dark
+let g:gruvbox_bold=0
+let g:gruvbox_italic=0
+let g:airline_theme='gruvbox'
+colorscheme gruvbox
+
 let g:airline#extensions#tabline#enabled = 1
 " }}}
 " Tabs & Spaces {{{
