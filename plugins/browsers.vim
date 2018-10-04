@@ -1,7 +1,7 @@
 " CtrlP {{{
 " noremap <silent> t :CtrlP<CR>
 noremap <leader>p :CtrlP<CR>
-noremap <leader>t :CtrlPBufTagAll<CR>
+noremap <leader>t :CtrlPTag<CR>
 let g:ctrlp_match_window='bottom,order:ttb'
 let g:ctrlp_switch_buffer=0
 let g:ctrlp_working_path_mode = 'rw'

@@ -22,7 +22,8 @@ Plug 'dracula/vim', { 'as': 'dracula' }
 
 " Plug 'Shougo/vimproc.vim'
 " Plug 'Shougo/unite.vim'
-" " Plug 'Shougo/denite.nvim'
+" Plug 'SpaceVim/unite-ctags'
+" Plug 'Shougo/denite.nvim'
 " --- Regular plugins ---"
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jlanzarotta/bufexplorer'
