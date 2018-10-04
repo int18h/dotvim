@@ -14,7 +14,7 @@ if has("gui_running")
     if g:os == "Darwin"
         set guifont=FuraMono\ Nerd\ Font:h12
     elseif g:os == "Linux"
-        set guifont=FuraMono\ Nerd\ Font\ 9
+        set guifont=Fira\ Mono\ 9
     elseif g:os == "Windows"
         set guifont=FuraMono_Nerd_Font:h12:cANSI
     endif

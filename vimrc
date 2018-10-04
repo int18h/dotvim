@@ -2,9 +2,11 @@ set nocompatible
 filetype off
 syntax on
 
+
 " Plug {{{
 runtime! plugins/plug.vim
 " }}}
+
 " OS detection {{{
 if !exists("g:os")
     if has("win64") || has("win32") || has("win16")
