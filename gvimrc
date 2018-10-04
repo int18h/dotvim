@@ -14,7 +14,7 @@ if has("gui_running")
     if g:os == "Darwin"
         set guifont=Fira\ Mono\ For\ Powerline:h12
     elseif g:os == "Linux"
-        set guifont=Fira\ Mono\ For\ Powerline\ 9
+        set guifont=Fira\ Mono\ 9
     elseif g:os == "Windows"
         set guifont=Fira_Mono_For_Powerline:h12:cANSI
     endif
