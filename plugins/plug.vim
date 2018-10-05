@@ -41,7 +41,8 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'htmldjango', 'scss','eruby','l
 Plug 'editorconfig/editorconfig-vim'
 Plug 'rking/ag.vim'
 Plug 'Chun-Yang/vim-action-ag'
-Plug 'scrooloose/syntastic'
+" Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
 Plug 'sheerun/vim-polyglot'
 Plug 'crusoexia/vim-javascript-lib', { 'for': ['js', 'html', 'erb'] }
 Plug 'tpope/vim-rails', { 'for': ['rb', 'erb'] }
@@ -53,6 +54,7 @@ Plug 'nelstrom/vim-textobj-rubyblock', { 'for': ['rb', 'eruby'] }
 Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go', { 'for': ['go'] }
+Plug 'davidhalter/jedi-vim'
 
 " Deoplete installation
 if has('nvim')
