@@ -1,16 +1,16 @@
 " ALE {{{
-let g:ale_completion_enabled = 0
-let g:airline#extensions#ale#enabled = 1
-let g:ale_set_highlights = 0
+" let g:ale_completion_enabled = 0
+" let g:airline#extensions#ale#enabled = 1
+" let g:ale_set_highlights = 0
 " }}}
 " Syntastic {{{
-" let g:syntastic_check_on_open=1
-" let g:syntastic_check_on_wq=1
-" let g:syntastic_enable_signs=1
-" let g:syntastic_auto_jump=0
-" let g:syntastic_ruby_checkers=['rubocop', 'mri']
-" let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
-" let g:syntastic_scala_checkers=['scalac', 'scalastyle']
+let g:syntastic_check_on_open=1
+let g:syntastic_check_on_wq=1
+let g:syntastic_enable_signs=1
+let g:syntastic_auto_jump=0
+let g:syntastic_ruby_checkers=['rubocop', 'mri']
+let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
+let g:syntastic_scala_checkers=['scalac', 'scalastyle']
 " }}}
 " Emmet {{{
 let g:user_emmet_install_global=0
