@@ -43,6 +43,7 @@ let g:NERDTreeWinSize=40
 " autocmd VimEnter * NERDTreeClose
 " }}}
 " TagBar {{{
+let g:tagbar_ctags_bin='/usr/local/bin/ctags'
 nmap <F8> :TagbarToggle<CR>
 " }}}
 " " Unite {{{
