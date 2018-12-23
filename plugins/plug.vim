@@ -9,13 +9,13 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Colorschemes
-Plug 'rcabralc/monokai-airline.vim'
 Plug 'crusoexia/vim-monokai'
-Plug 'rakr/vim-one'
-Plug 'chriskempson/base16-vim'
-Plug 'morhetz/gruvbox'
-Plug 'altercation/vim-colors-solarized'
-Plug 'dracula/vim', { 'as': 'dracula' }
+Plug 'rcabralc/monokai-airline.vim'
+" Plug 'rakr/vim-one'
+" Plug 'chriskempson/base16-vim'
+" Plug 'morhetz/gruvbox'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'chriskempson/vim-tomorrow-theme'
 " Plug 'arty88/sexy-railscasts-256-theme'
@@ -36,14 +36,15 @@ Plug 'gilsondev/searchtasks.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
 " Basic development features 
+Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'htmldjango', 'scss','eruby','less'] }
 Plug 'editorconfig/editorconfig-vim'
 Plug 'rking/ag.vim'
 Plug 'Chun-Yang/vim-action-ag'
-Plug 'scrooloose/syntastic'
-" Plug 'w0rp/ale'
-Plug 'sheerun/vim-polyglot'
+" Plug 'scrooloose/syntastic'
+Plug 'w0rp/ale'
+" Plug 'sheerun/vim-polyglot'
 Plug 'crusoexia/vim-javascript-lib', { 'for': ['js', 'html', 'erb'] }
 Plug 'tpope/vim-rails', { 'for': ['rb', 'erb'] }
 Plug 'tpope/vim-rake', { 'for': 'rb' }
@@ -68,11 +69,11 @@ Plug 'zchee/deoplete-go', { 'do': 'make'}
 Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
 Plug 'zchee/deoplete-jedi'
 " Other plugins require curl
-if executable("curl")
+"if executable("curl")
     " Webapi: Dependency of Gist-vim
-    Plug 'mattn/webapi-vim'
+"    Plug 'mattn/webapi-vim'
     " Gist: Post text to gist.github
-    Plug 'mattn/gist-vim'
-endif
+"    Plug 'mattn/gist-vim'
+"endif
 filetype plugin indent on                   " required!
 call plug#end()
