@@ -14,6 +14,9 @@ let g:ale_set_highlights = 0
 " let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
 " let g:syntastic_scala_checkers=['scalac', 'scalastyle']
 " }}}
+" Polyglot {{{
+let g:polyglot_disabled=['go']
+" }}
 " Emmet {{{
 let g:user_emmet_install_global=0
 autocmd FileType html,css,eruby EmmetInstall
@@ -25,7 +28,7 @@ let g:javascript_enable_domhtmlcss=1
 let g:searchtasks_list=["TODO", "FIXME", "XXX"]
 " }}}
 " EditorConfig {{{
-let g:EditorConfig_core_mode = 'external_command'
+let g:EditorConfig_core_mode='external_command'
 " }}}
 " Jedi configuration {{{
 let g:jedi#completions_enabled = 0
@@ -36,7 +39,7 @@ set completeopt=longest,menuone
 " }}}
 " {{{ Gutentags
 set statusline+=%{gutentags#statusline()}
-let g:gutentags_project_root = ['Makefile', '.git']
+let g:gutentags_project_root=['Makefile', '.git']
 " }}}
 " GO programming {{{
 " set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim

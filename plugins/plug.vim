@@ -44,7 +44,6 @@ Plug 'rking/ag.vim'
 Plug 'Chun-Yang/vim-action-ag'
 " Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
-" Plug 'sheerun/vim-polyglot'
 Plug 'crusoexia/vim-javascript-lib', { 'for': ['js', 'html', 'erb'] }
 Plug 'tpope/vim-rails', { 'for': ['rb', 'erb'] }
 Plug 'tpope/vim-rake', { 'for': 'rb' }
@@ -56,6 +55,7 @@ Plug 'tpope/vim-sensible'
 Plug 'tpope/vim-surround'
 Plug 'fatih/vim-go', { 'for': ['go'] }
 Plug 'davidhalter/jedi-vim'
+Plug 'sheerun/vim-polyglot'
 
 " Deoplete installation
 if has('nvim')
