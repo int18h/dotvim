@@ -17,7 +17,9 @@ if !exists("g:os")
 endif
 " }}}
 " Fonts & Colors {{{
-language mes en_US
+if g:os == "Darwin"
+    language mes en_US
+endif
 if $TERM == "xterm-256color"
     set t_Co=256
 endif
@@ -53,8 +55,8 @@ set expandtab               " tabs are spaces
 " }}}
 " UI Config {{{
 " syntax on
-set number                  " show line numbers
-" set number relativenumber   " show relative numbers with number of current line
+" set number                  " show line numbers
+set number relativenumber   " show relative numbers with number of current line
 set showcmd                 " show command in bottom bar
 set cursorline              " highlight current line
 filetype plugin indent on   " load filetype-specific indent files
