@@ -17,7 +17,9 @@ if !exists("g:os")
 endif
 " }}}
 " Fonts & Colors {{{
-language mes en_US
+if g:os == "Darwin"
+    language mes en_US
+endif
 if $TERM == "xterm-256color"
     set t_Co=256
 endif
