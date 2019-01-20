@@ -14,7 +14,7 @@ Plug 'rcabralc/monokai-airline.vim'
 " Plug 'rakr/vim-one'
 " Plug 'chriskempson/base16-vim'
 " Plug 'morhetz/gruvbox'
-" Plug 'altercation/vim-colors-solarized'
+Plug 'altercation/vim-colors-solarized'
 " Plug 'dracula/vim', { 'as': 'dracula' }
 " Plug 'ryanoasis/vim-devicons'
 " Plug 'chriskempson/vim-tomorrow-theme'

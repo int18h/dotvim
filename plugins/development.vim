@@ -2,8 +2,9 @@
 let g:ale_completion_enabled = 0
 let g:airline#extensions#ale#enabled = 1
 let g:ale_set_highlights = 0
-" let g:ale_lint_on_text_changed = 0
-" let g:ale_lint_on_insert_leave = 1
+let g:ale_lint_on_text_changed = 1
+let g:ale_lint_on_save = 0
+let g:ale_lint_on_insert_leave = 0
 " }}}
 " Syntastic {{{
 " let g:syntastic_check_on_open=1

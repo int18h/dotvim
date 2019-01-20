@@ -53,9 +53,10 @@ set expandtab               " tabs are spaces
 " }}}
 " UI Config {{{
 " syntax on
-set number                  " show line numbers
-" set number relativenumber   " show relative numbers with number of current line
-set showcmd                 " show command in bottom bar
+" set number                  " show line numbers
+set number relativenumber   " show relative numbers with number of current line
+" set showcmd                 " show command in bottom bar
+set noshowcmd
 set cursorline              " highlight current line
 filetype plugin indent on   " load filetype-specific indent files
 set wildmenu                " visual autocomplete for command menu
