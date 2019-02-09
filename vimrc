@@ -40,6 +40,7 @@ Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'htmldjango', 'scss','eruby','l
 Plug 'editorconfig/editorconfig-vim'
 Plug 'rking/ag.vim'
 Plug 'Chun-Yang/vim-action-ag'
+Plug 'brooth/far.vim'
 " Plug 'scrooloose/syntastic'
 Plug 'w0rp/ale'
 Plug 'crusoexia/vim-javascript-lib', { 'for': ['js', 'html', 'erb'] }
