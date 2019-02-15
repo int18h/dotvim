@@ -166,7 +166,7 @@ noremap <C-K> <C-W><C-K>
 noremap <C-L> <C-W><C-L>
 noremap <C-H> <C-W><C-H>
 " Tab between buffers
-noremap <tab> <c-w><c-w>
+" noremap <tab> <c-w><c-w>
 " Switch between last two buffers
 noremap <leader><leader> <C-^>
 " Resize buffers
