@@ -1,4 +1,7 @@
 set nocompatible
+filetype off
+syntax on
+
 " Plug {{{
 " Install vim-plug if we don't already have it
 if empty(glob("~/.vim/autoload/plug.vim"))
@@ -57,6 +60,19 @@ if v:version >= 800
 else
     Plug 'scrooloose/syntastic'
 endif
+" Deoplete installation
+" if has('nvim')
+"   Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+"   Plug 'Shougo/deoplete.nvim'
+"   Plug 'roxma/nvim-yarp'
+"   Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" Plug 'zchee/deoplete-go', { 'do': 'make'}
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'zchee/deoplete-jedi'
+" Plug 'HerringtonDarkholme/deoplete-typescript', { 'do': 'npm install -g typescript' }
+" " Plug 'mhartington/nvim-typescript', { 'do': 'npm install -g typescript' }
 " Other plugins require curl
 "if executable("curl")
     " Webapi: Dependency of Gist-vim
@@ -67,7 +83,6 @@ endif
 call plug#end()
 filetype plugin indent on                   " required!
 " }}}
-
 " OS detection {{{
 if !exists("g:os")
     if has("win64") || has("win32") || has("win16")
@@ -81,21 +96,23 @@ endif
 if g:os == "Darwin"
     language mes en_US
 endif
-set t_CO=256
-if $COLORTERM == 'gnome-terminal'
-  set term=gnome-256color
-else
-  if $TERM == 'xterm'
-    set term=xterm-256color
-  endif
-endif
-if &term =~ '256color'
-  set t_ut=
-endif
-" set background=light
-" colorscheme solarized
-" let g:airline_theme='solarized'
-" let g:airline#extensions#tabline#enabled = 1
+" Possible bug in putty/tmux
+" if $TERM == "xterm-256color"
+"     set t_Co=256
+" endif
+" if $TRUECOLOR_TERM == 1
+"     set termguicolors
+" endif
+" COLORSCHEME: monokai
+" let g:monokai_term_italic = 0
+" let g:monokai_gui_italic = 0
+" colorscheme monokai
+" COLORSCHEME: solarized-light
+set background=light
+colorscheme solarized
+let g:airline_theme='solarized'
+
+let g:airline#extensions#tabline#enabled = 1
 " }}}
 " Tabs & Spaces {{{
 set tabstop=4               " number of visual spaces per TAB
@@ -104,13 +121,13 @@ set softtabstop=4           " number of spaces in tab when editing
 set expandtab               " tabs are spaces
 " }}}
 " UI Config {{{
-syntax on
+" syntax on
 " set number                  " show line numbers
 set number relativenumber   " show relative numbers with number of current line
 " set showcmd                 " show command in bottom bar
 set noshowcmd
 set cursorline              " highlight current line
-set binary                  " view the content of a binary file in a hex view
+filetype plugin indent on   " load filetype-specific indent files
 set wildmenu                " visual autocomplete for command menu
 set nocursorline
 set ttyfast
@@ -120,8 +137,6 @@ set encoding=utf-8
 set nowrap
 set autoindent
 set smartindent
-"" Fix backspace indent
-set backspace=indent,eol,start
 " set showmatch               " highlight matching [{()}]
 " }}}
 " Backup & Swap{{{
@@ -131,7 +146,6 @@ set nowritebackup
 " }}}
 " Searching {{{
 set hlsearch		        " highlight matches
-set incsearch
 set ignorecase
 set smartcase
 " }}}
@@ -168,16 +182,7 @@ if bufwinnr(1)
   nmap ö <C-W>-<C-W>-
   nmap ä <C-W>+<C-W>+
 endif
-cnoreabbrev W! w!
-cnoreabbrev Q! q!
-cnoreabbrev Qall! qall!
-cnoreabbrev Wq wq
-cnoreabbrev Wa wa
-cnoreabbrev wQ wq
-cnoreabbrev WQ wq
-cnoreabbrev W w
-cnoreabbrev Q q
-cnoreabbrev Qall qall
+
 " }}}
 " Browsing (CtrlP, Netrw, Ag) {{{
 " CtrlP {{{
@@ -276,32 +281,6 @@ let g:ale_lint_on_insert_leave = 0
 " let g:syntastic_ruby_checkers=['rubocop', 'mri']
 " let g:syntastic_python_checkers=['pep8', 'pylint', 'python']
 " let g:syntastic_scala_checkers=['scalac', 'scalastyle']
-" }}}
-" Coc {{{
-" use coc for jumps
-nmap <leader>gd <Plug>(coc-definition)
-nmap <leader>gr <Plug>(coc-references)
-
-" Use <cr> for confirm completion, `<C-g>u` means break undo chain at current position.
-" Coc only does snippet and additional edit on confirm.
-inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
-
-" use <c-space> for trigger completion.
-inoremap <silent><expr> <c-space> coc#refresh()
-
-" rename current word
-nmap <leader>rn <Plug>(coc-rename)
-
-" use <c-j> and <c-k> for selection options
-inoremap <expr> <C-j> pumvisible() ? "\<C-n>" : "\<C-j>"
-inoremap <expr> <C-k> pumvisible() ? "\<C-p>" : "\<C-k>"
-
-"use <tab> for trigger completion, completion confirm, snippet expand and jump
-inoremap <silent><expr> <TAB>
-      \ pumvisible() ? coc#_select_confirm() :
-      \ coc#expandableOrJumpable() ? coc#rpc#request('doKeymap', ['snippets-expand-jump','']) :
-      \ <SID>check_back_space() ? "\<TAB>" :
-      \ coc#refresh()
 " }}}
 " Polyglot {{{
 let g:polyglot_disabled=['go']

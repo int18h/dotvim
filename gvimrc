@@ -12,7 +12,7 @@ set guioptions-=L  "remove left-hand scroll bar
 set guicursor+=a:blinkon0
 if has("gui_running")
     if g:os == "Darwin"
-        set guifont=FuraMono\ Nerd\ Font:h12
+        set guifont=Fira\ Mono:h12
     elseif g:os == "Linux"
         set guifont=Fira\ Mono\ 9
     elseif g:os == "Windows"
