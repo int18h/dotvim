@@ -33,7 +33,7 @@ Plug 'tpope/vim-fugitive'
 Plug 'gilsondev/searchtasks.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'Xuyuanp/nerdtree-git-plugin'
-" Basic development features 
+" Basic development features
 Plug 'ludovicchabant/vim-gutentags'
 Plug 'majutsushi/tagbar'
 Plug 'mattn/emmet-vim', { 'for': ['html', 'css', 'htmldjango', 'scss','eruby','less'] }
@@ -94,13 +94,13 @@ endif
 if $TERM == "xterm-256color"
     set t_Co=256
 endif
-if $TRUECOLOR_TERM == 1 
+if $TRUECOLOR_TERM == 1
     set termguicolors
 endif
 " COLORSCHEME: monokai
-let g:monokai_term_italic = 0
-let g:monokai_gui_italic = 0
-colorscheme monokai
+" let g:monokai_term_italic = 0
+" let g:monokai_gui_italic = 0
+" colorscheme monokai
 " COLORSCHEME: solarized-light
 " set background=light
 " colorscheme solarized
@@ -123,7 +123,7 @@ set noshowcmd
 set cursorline              " highlight current line
 filetype plugin indent on   " load filetype-specific indent files
 set wildmenu                " visual autocomplete for command menu
-set nocursorline 
+set nocursorline
 set ttyfast
 set lazyredraw              " redraw only when we need to.
 set clipboard=unnamedplus
@@ -215,7 +215,7 @@ let g:netrw_localrmdir='rm -fr'
 "let g:netrw_browse_split = 4
 "let g:netrw_altv = 1
 "let g:netrw_winsize = 25
-" }}} 
+" }}}
 " NERDTree {{{
 nmap <leader>nt :NERDTreeToggle<CR>
 let NERDTreeHighlightCursorline=1
