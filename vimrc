@@ -15,13 +15,14 @@ endif
 call plug#begin('~/.vim/plugged')
 
 " Colorschemes
-Plug 'crusoexia/vim-monokai'
-Plug 'rcabralc/monokai-airline.vim'
-Plug 'altercation/vim-colors-solarized'
+" Plug 'crusoexia/vim-monokai'
+" Plug 'rcabralc/monokai-airline.vim'
+" Plug 'altercation/vim-colors-solarized'
 " Plug 'Shougo/vimproc.vim'
 " Plug 'Shougo/unite.vim'
 " Plug 'SpaceVim/unite-ctags'
 " Plug 'Shougo/denite.nvim'
+Plug 'int18h/vim-code-dark'
 " --- Regular plugins ---"
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jlanzarotta/bufexplorer'
@@ -57,16 +58,16 @@ Plug 'davidhalter/jedi-vim'
 Plug 'sheerun/vim-polyglot'
 
 " Deoplete installation
-if has('nvim')
-  Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
-else
-  Plug 'Shougo/deoplete.nvim'
-  Plug 'roxma/nvim-yarp'
-  Plug 'roxma/vim-hug-neovim-rpc'
-endif
-Plug 'zchee/deoplete-go', { 'do': 'make'}
-Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
-Plug 'zchee/deoplete-jedi'
+" if has('nvim')
+" Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+" else
+  " Plug 'Shougo/deoplete.nvim'
+  " Plug 'roxma/nvim-yarp'
+  " Plug 'roxma/vim-hug-neovim-rpc'
+" endif
+" Plug 'zchee/deoplete-go', { 'do': 'make'}
+" Plug 'carlitux/deoplete-ternjs', { 'do': 'npm install -g tern' }
+" Plug 'zchee/deoplete-jedi'
 " Other plugins require curl
 "if executable("curl")
     " Webapi: Dependency of Gist-vim
@@ -290,7 +291,7 @@ let g:javascript_enable_domhtmlcss=1
 let g:searchtasks_list=["TODO", "FIXME", "XXX"]
 " }}}
 " EditorConfig {{{
-let g:EditorConfig_core_mode='external_command'
+" let g:EditorConfig_core_mode='external_command'
 " }}}
 " Jedi configuration {{{
 let g:jedi#completions_enabled = 0
@@ -306,26 +307,26 @@ let g:gutentags_project_root=['Makefile', '.git']
 " GO programming {{{
 " set rtp+=/usr/local/Cellar/go/1.0.3/misc/vim
 let g:go_test_timeout='10s'
-" if exists('g:loaded_polyglot')
-"     let g:polyglot_disabled = ['go']
-" endif
+if exists('g:loaded_polyglot')
+    let g:polyglot_disabled = ['go']
+endif
 " }}}
 " Deoplete {{{
-let g:deoplete#enable_at_startup = 1
-let g:deoplete#auto_complete_start_length = 5
+" let g:deoplete#enable_at_startup = 1
+" let g:deoplete#auto_complete_start_length = 5
 " TernJS
-let g:deoplete#sources#ternjs#types = 1
-let g:deoplete#sources#ternjs#depths = 1
-let g:deoplete#sources#ternjs#docs = 1
-let g:deoplete#sources#ternjs#filter = 0
-let g:deoplete#sources#ternjs#case_insensitive = 1
-let g:deoplete#sources#ternjs#guess = 0
-let g:deoplete#sources#ternjs#filetypes = [
-                \ 'jsx',
-                \ 'javascript.jsx',
-                \ 'vue',
-                \ '...'
-                \ ]
+" let g:deoplete#sources#ternjs#types = 1
+" let g:deoplete#sources#ternjs#depths = 1
+" let g:deoplete#sources#ternjs#docs = 1
+" let g:deoplete#sources#ternjs#filter = 0
+" let g:deoplete#sources#ternjs#case_insensitive = 1
+" let g:deoplete#sources#ternjs#guess = 0
+" let g:deoplete#sources#ternjs#filetypes = [
+"               \ 'jsx',
+"                \ 'javascript.jsx',
+"                \ 'vue',
+"                \ '...'
+"                \ ]
 " }}}
 " }}}
 " Custom Functions {{{

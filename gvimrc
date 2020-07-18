@@ -12,12 +12,15 @@ set guioptions-=L  "remove left-hand scroll bar
 set guicursor+=a:blinkon0
 if has("gui_running")
     if g:os == "Darwin"
-        set guifont=FuraMono\ Nerd\ Font:h12
+        set guifont=Menlo:h12
     elseif g:os == "Linux"
-        set guifont=Fira\ Mono\ 9
+        set guifont=Consolas\ 9
     elseif g:os == "Windows"
-        set guifont=FuraMono_Nerd_Font:h12:cANSI
+        set guifont=Consolas:h12:cANSI
     endif
     set linespace=7
 endif
 set clipboard=unnamedplus
+set background=dark
+colorscheme vsdark
+let g:airline_theme = 'codedark'
