@@ -22,7 +22,8 @@ call plug#begin('~/.vim/plugged')
 " Plug 'Shougo/unite.vim'
 " Plug 'SpaceVim/unite-ctags'
 " Plug 'Shougo/denite.nvim'
-Plug 'int18h/vim-code-dark'
+" Plug 'int18h/vim-code-dark'
+Plug 'cormacrelf/vim-colors-github'
 " --- Regular plugins ---"
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'jlanzarotta/bufexplorer'

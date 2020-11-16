@@ -21,6 +21,6 @@ if has("gui_running")
     set linespace=7
 endif
 set clipboard=unnamedplus
-set background=dark
-colorscheme vsdark
-let g:airline_theme = 'codedark'
+" set background=dark
+colorscheme github
+let g:airline_theme = 'github'
